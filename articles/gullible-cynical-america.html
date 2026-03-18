@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gullible, Cynical America — Accessible News Reader</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="article-nav" aria-label="Navigation">
+    <a href="../index.html">&larr; Back to articles</a>
+  </nav>
+
+  <main id="main">
+    <article>
+      <h1>Gullible, Cynical America</h1>
+      <p><strong>The trouble with believing anything and nothing at the same time</strong></p>
+      <p>By Adam Serwer</p>
+
+      <div class="audio-player">
+        <button class="play-btn" id="play-btn" aria-label="Play audio narration">
+          <span class="icon" aria-hidden="true">&#9654;</span>
+          <span id="play-label">Play Narration</span>
+        </button>
+        <audio id="audio" src="../audio/Gullible,%20Cynical%20America.mp3" preload="none"></audio>
+      </div>
+
+      <div class="article-body">
+        <p>
+          Many americans believe that vaccines are unsafe, but will jab themselves full of performance enhancers. They think seed oils cause chronic disease, but beef tallow is healthy. They'll say you can't trust federally insured banks, but you can trust the millionaires who want you to invest in their volatile vaporware crypto tokens. They think food additives are toxic but support an administration removing all restrictions on pumping pollutants into the air and water. They'll insist that you can't trust scientists, because they're part of the conspiracy. The podcaster selling you his special creatine gummies, though? He seems trustworthy.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Accessible News Reader &mdash; built for readability and ease of use.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById("play-btn");
+      var audio = document.getElementById("audio");
+      var label = document.getElementById("play-label");
+      var icon = btn.querySelector(".icon");
+
+      btn.addEventListener("click", function () {
+        if (audio.paused) {
+          audio.play();
+          label.textContent = "Pause Narration";
+          icon.textContent = "\u275A\u275A";
+          btn.setAttribute("aria-label", "Pause audio narration");
+        } else {
+          audio.pause();
+          label.textContent = "Play Narration";
+          icon.textContent = "\u25B6";
+          btn.setAttribute("aria-label", "Play audio narration");
+        }
+      });
+
+      audio.addEventListener("ended", function () {
+        label.textContent = "Play Narration";
+        icon.textContent = "\u25B6";
+        btn.setAttribute("aria-label", "Play audio narration");
+      });
+    })();
+  </script>
+</body>
+</html>

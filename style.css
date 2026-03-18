@@ -1,0 +1,167 @@
+/* ============================================
+   Accessible News Reader — High-Visibility Styles
+   Designed for severe visual impairment.
+   Single large font size throughout. ~24 chars
+   per line on iPhone display.
+   ============================================ */
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 30px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: #000;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+/* Everything inherits the same font size */
+h1, h2, h3, p, a, span, li, button, strong {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus indicators */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 4px solid #0044cc;
+  outline-offset: 4px;
+}
+
+/* Headings — same size as body, just bold */
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+  color: #0044cc;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 4px solid #000;
+  padding-bottom: 0.75em;
+  margin-bottom: 1em;
+}
+
+/* Article list (index page) */
+.article-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.article-list li {
+  border: 3px solid #000;
+  border-radius: 0.25em;
+}
+
+.article-list a {
+  display: block;
+  padding: 0.75em;
+  text-decoration: none;
+  color: #000;
+}
+
+.article-list .article-title {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.article-list .article-summary {
+  display: block;
+}
+
+/* Article page */
+.article-nav {
+  margin-bottom: 1em;
+}
+
+.article-nav a {
+  font-weight: 700;
+}
+
+.article-body {
+  margin-top: 1em;
+}
+
+.article-body p {
+  margin-bottom: 1em;
+}
+
+/* Audio player controls */
+.audio-player {
+  margin: 1em 0;
+}
+
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  width: 100%;
+  min-height: 72px;
+  padding: 0.75em;
+  font-weight: 700;
+  color: #fff;
+  background-color: #0044cc;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.play-btn:hover {
+  background-color: #003399;
+}
+
+.play-btn:active {
+  background-color: #002266;
+}
+
+.play-btn .icon {
+  line-height: 1;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 3px solid #000;
+}
