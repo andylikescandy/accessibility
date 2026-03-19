@@ -15,17 +15,17 @@
 
   <main id="main">
     <article>
-      <h1>Crypto's True Believers Demand to Be Taken Seriously</h1>
-      <p><strong>They partied like rock stars, searched for aliens, practiced survivalism, and sometimes showed up without shoes. Then crypto winter came—and they lost billions.</strong></p>
-      <p>By Clara Molot</p>
-
       <div class="audio-player">
         <button class="play-btn" id="play-btn" aria-label="Play audio narration">
           <span class="icon" aria-hidden="true">&#9654;</span>
-          <span id="play-label">Play Narration</span>
+          <span id="play-label">Play</span>
         </button>
         <audio id="audio" src="../audio/Crypto's%20True%20Believers%20Demand%20to%20Be%20Taken%20Seriously.mp3" preload="none"></audio>
       </div>
+
+      <h1>Crypto's True Believers Demand to Be Taken Seriously</h1>
+      <p><strong>They partied like rock stars, searched for aliens, practiced survivalism, and sometimes showed up without shoes. Then crypto winter came—and they lost billions.</strong></p>
+      <p>By Clara Molot</p>
 
       <div class="article-body">
         <p>I don't think I can do this anymore," read one of the dozens of Signal messages that a major crypto market maker, who asked to go simply by Bison, received in the first few days of February. The crypto market had just shed another 15 percent—some $400 billion gone in a matter of days.</p>
@@ -171,19 +171,19 @@
       btn.addEventListener("click", function () {
         if (audio.paused) {
           audio.play();
-          label.textContent = "Pause Narration";
+          label.textContent = "Pause";
           icon.textContent = "\u275A\u275A";
           btn.setAttribute("aria-label", "Pause audio narration");
         } else {
           audio.pause();
-          label.textContent = "Play Narration";
+          label.textContent = "Play";
           icon.textContent = "\u25B6";
           btn.setAttribute("aria-label", "Play audio narration");
         }
       });
 
       audio.addEventListener("ended", function () {
-        label.textContent = "Play Narration";
+        label.textContent = "Play";
         icon.textContent = "\u25B6";
         btn.setAttribute("aria-label", "Play audio narration");
       });

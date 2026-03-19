@@ -15,17 +15,17 @@
 
   <main id="main">
     <article>
-      <h1>The Founder of Anthropic Says He Wants to Protect Humanity From AI. Just Don&#x27;t Ask How.</h1>
-      <p><strong>In search of Dario Amodei, the Anthropic founder whose battle with Sam Altman could reshape civilization, Joe Hagan embarks on an odyssey through the tech cults, founder co-ops, and conscience of the AI revolution</strong></p>
-      <p>By Joe Hagan</p>
-
       <div class="audio-player">
         <button class="play-btn" id="play-btn" aria-label="Play audio narration">
           <span class="icon" aria-hidden="true">&#9654;</span>
-          <span id="play-label">Play Narration</span>
+          <span id="play-label">Play</span>
         </button>
         <audio id="audio" src="../audio/The%20Founder%20of%20Anthropic%20Says%20He%20Wants%20to%20Protect%20Humanity%20From%20AI.mp3" preload="none"></audio>
       </div>
+
+      <h1>The Founder of Anthropic Says He Wants to Protect Humanity From AI. Just Don&#x27;t Ask How.</h1>
+      <p><strong>In search of Dario Amodei, the Anthropic founder whose battle with Sam Altman could reshape civilization, Joe Hagan embarks on an odyssey through the tech cults, founder co-ops, and conscience of the AI revolution</strong></p>
+      <p>By Joe Hagan</p>
 
       <div class="article-body">
 
@@ -531,19 +531,19 @@
       btn.addEventListener("click", function () {
         if (audio.paused) {
           audio.play();
-          label.textContent = "Pause Narration";
+          label.textContent = "Pause";
           icon.textContent = "❚❚";
           btn.setAttribute("aria-label", "Pause audio narration");
         } else {
           audio.pause();
-          label.textContent = "Play Narration";
+          label.textContent = "Play";
           icon.textContent = "▶";
           btn.setAttribute("aria-label", "Play audio narration");
         }
       });
 
       audio.addEventListener("ended", function () {
-        label.textContent = "Play Narration";
+        label.textContent = "Play";
         icon.textContent = "▶";
         btn.setAttribute("aria-label", "Play audio narration");
       });
