@@ -88,13 +88,12 @@ a {
 }
 
 .article-list li {
-  border: 3px solid #000;
-  border-radius: 0.25em;
+  border-bottom: 3px solid #000;
 }
 
 .article-list a {
   display: block;
-  padding: 0.75em;
+  padding: 0.75em 0;
   text-decoration: none;
   color: #000;
 }
