@@ -86,7 +86,8 @@ a {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75em;
+  gap: 0;
+  border-top: 10px solid #000;
 }
 
 .article-list li {
@@ -95,7 +96,7 @@ a {
 
 .article-list a {
   display: block;
-  padding: 0.75em 0;
+  padding: 0.25em 0;
   text-decoration: none;
   color: #000;
 }
