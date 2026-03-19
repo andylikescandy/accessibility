@@ -173,16 +173,29 @@
 
       btn.addEventListener("click", function () {
         if (audio.paused) {
+          label.textContent = "Loading...";
+          btn.setAttribute("aria-label", "Loading audio");
           audio.play();
-          label.textContent = "Pause";
-          icon.textContent = "\u275A\u275A";
-          btn.setAttribute("aria-label", "Pause audio narration");
         } else {
           audio.pause();
-          label.textContent = "Play";
-          icon.textContent = "\u25B6";
-          btn.setAttribute("aria-label", "Play audio narration");
         }
+      });
+
+      audio.addEventListener("playing", function () {
+        label.textContent = "Pause";
+        icon.textContent = "\u275A\u275A";
+        btn.setAttribute("aria-label", "Pause audio narration");
+      });
+
+      audio.addEventListener("waiting", function () {
+        label.textContent = "Loading...";
+        btn.setAttribute("aria-label", "Loading audio");
+      });
+
+      audio.addEventListener("pause", function () {
+        label.textContent = "Play";
+        icon.textContent = "\u25B6";
+        btn.setAttribute("aria-label", "Play audio narration");
       });
 
       audio.addEventListener("ended", function () {
